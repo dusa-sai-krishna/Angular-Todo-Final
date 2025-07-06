@@ -1,0 +1,22 @@
+
+<div class="flex flex-row justify-center mt-10">
+	<div class="flex flex-row w-[80vw] justify-between">
+
+	<span class="text-2xl font-bold text-primary-700 dark:text-primary animate-fadeinleft animate-duration-500 " >
+		TODO Management Tool
+	</span>
+
+		<span>
+			@if( theme()==="dark"){
+				<p-button (click)="onToggleTheme()" icon="pi pi-sun"  size="small" variant="outlined"/>
+			} @else {
+				<p-button  (click)="onToggleTheme()" icon="pi pi-moon"  size="small" variant="outlined"/>
+			}
+
+
+		</span>
+
+
+	</div>
+</div>
+

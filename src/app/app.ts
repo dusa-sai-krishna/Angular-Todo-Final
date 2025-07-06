@@ -1,22 +1,15 @@
-import {Component, inject} from '@angular/core';
-import {ThemeService} from "../theme/theme.service";
-import {Button} from "primeng/button";
+import {Component} from '@angular/core';
+import {HeaderComponent} from "./header/header";
 
 
 @Component({
   selector: 'app-root',
-  imports: [
-    Button
-  ],
+    imports: [
+
+        HeaderComponent
+    ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  private _themeService = inject(ThemeService)
-  public theme = this._themeService.theme;
-
-
-  onToggleTheme() {
-    this._themeService.toggleDarkMode();
-  }
 }
