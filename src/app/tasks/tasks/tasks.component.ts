@@ -19,9 +19,5 @@ export class TasksComponent {
     return this._tasksService.allTasks().filter(task=>task.userId===this.userId());
   })
 
-  constructor() {
-    effect(() => {console.log(this.userId())
-    });
-  }
 
 }

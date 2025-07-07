@@ -1,5 +1,5 @@
 
-	<form [formGroup]="ngForm" class="flex flex-col space-y-8 w-full p-5 dark:bg-surface-950 mt-5">
+	<form [formGroup]="ngForm" (ngSubmit)="onSubmit()" class="flex flex-col space-y-8 w-full p-5 dark:bg-surface-950 mt-5">
 		<p-floatlabel>
 			<input  formControlName="title" pInputText  id="title" autocomplete="off" class="w-full" [invalid]="isTitleInvalid" />
 			<label for="title">Title</label>
@@ -16,7 +16,7 @@
 			</p-floatlabel>
 
 
-			<button (click)="onSubmit()" pButton class="w-full" > Add</button>
+			<button type="submit" pButton class="w-full" > Add</button>
 		</div>
 		<button routerLink="../" pButton class="w-full" severity="danger"> Cancel</button>
 		@if(isDateInvalid || isTitleInvalid || isSummaryInvalid){

@@ -23,7 +23,7 @@ function formatDate(date:Date) {
   const day = String(date.getDate()).padStart(2, '0');
   const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
   const year = date.getFullYear();
-  return `${day}-${month}-${year}`;
+  return `${year}-${month}-${day}`
 }
 
 @Component({
@@ -89,7 +89,7 @@ export class NewTaskComponent {
       this._taskService.addTask(newTask)
       this._router.navigate(["users",this.userId(),"tasks"],{
         replaceUrl:true
-      }).then(r => console.log(r));
+      }).then(r => console.log());
     }
   }
 
