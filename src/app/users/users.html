@@ -1,9 +1,5 @@
-<div class="mt-[10vh] w-[25vw] p-2 rounded-lg flex flex-col space-y-2.5">
-
-
-		<app-user/>
-		<app-user/>
-		<app-user/>
-
-
+<div class="mt-[10vh] w-[25vw] p-2 rounded-lg flex flex-col space-y-2.5 ">
+	@for (user of users() ; track user.id) {
+		<app-user [user]="user"/>
+	}
 </div>

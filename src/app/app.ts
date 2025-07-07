@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {HeaderComponent} from "./header/header";
 import {UsersComponent} from "./users/users";
-import {TasksComponent} from "./tasks/tasks";
+import {RouterOutlet} from "@angular/router";
 
 
 @Component({
@@ -10,7 +10,7 @@ import {TasksComponent} from "./tasks/tasks";
 
         HeaderComponent,
         UsersComponent,
-        TasksComponent
+        RouterOutlet
     ],
   templateUrl: './app.html',
   styleUrl: './app.css'

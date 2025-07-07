@@ -1,1 +1,26 @@
-<p>new-task works!</p>
+
+	<form [formGroup]="ngForm" class="flex flex-col space-y-8 w-full p-5 dark:bg-surface-950 mt-5">
+		<p-floatlabel>
+			<input  formControlName="title" pInputText  id="title" autocomplete="off" class="w-full" [invalid]="isTitleInvalid" />
+			<label for="title">Title</label>
+		</p-floatlabel>
+		<p-floatlabel>
+		<textarea [invalid]="isSummaryInvalid" formControlName="summary" pTextarea id="summary"  rows="5" cols="30" style="resize: none" class="h-full w-full"></textarea>
+		<label for="summary">Summary</label>
+	</p-floatlabel>
+
+		<div class="flex flex-row w-full  space-x-3.5 items-baseline">
+			<p-floatlabel>
+				<p-datepicker [invalid]="isDateInvalid"  formControlName="dueDate" inputId="dueDate" showIcon iconDisplay="input"></p-datepicker>
+				<label for="dueDate">Due Date</label>
+			</p-floatlabel>
+
+
+			<button (click)="onSubmit()" pButton class="w-full" > Add</button>
+		</div>
+		<button routerLink="../" pButton class="w-full" severity="danger"> Cancel</button>
+		@if(isDateInvalid || isTitleInvalid || isSummaryInvalid){
+			<p class="text-sm text-red-400">Please check input values which are highlighted in red</p>
+		}
+	</form>
+

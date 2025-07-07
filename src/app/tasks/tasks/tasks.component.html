@@ -1,0 +1,12 @@
+<p-scroll-panel class="mt-5  h-[50vh]">
+	<div class=" p-3 flex flex-col space-y-10">
+		@for (task of userTasks() ; track task.id) {
+			<app-task [task]="task"/>
+		} @empty {
+			<p> Add Tasks to view them😁😁</p>
+		}
+	</div>
+
+</p-scroll-panel>
+
+

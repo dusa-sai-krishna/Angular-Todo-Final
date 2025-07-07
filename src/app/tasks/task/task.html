@@ -1,7 +1,14 @@
+
 <div class="text-white bg-primary-950 w-full rounded-lg flex flex-col  p-2 space-y-5
 relative z-0 transition-all duration-300 hover:-translate-y-1 hover:z-10 hover:shadow-lg">
-	<p class="text-xl font-bold"> Task Heading</p>
-	<p class="font-semibold">Task Content</p>
-	<p-button label="Completed" class="ml-auto"/>
+	<div>
+		<p class="text-xl font-bold">{{task()?.title}}</p>
+		<p>{{task()?.dueDate | date:'fullDate'}}</p>
+		<hr class="h-px my-2 bg-surface-500	 border-0 opacity-25">
+	</div>
+
+
+	<p class="font-semibold">{{task()?.summary}}</p>
+	<p-button label="Completed" class="ml-auto" (click)="onComplete()"/>
 
 </div>
