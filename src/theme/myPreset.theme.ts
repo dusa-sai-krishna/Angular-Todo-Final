@@ -17,6 +17,13 @@ export const MyPreset = definePreset(Aura, {
             900: '{indigo.900}',
             950: '{indigo.950}'
         }
+    },
+    components:{
+        scrollpanel:{
+            bar:{
+              size:'10px'
+            }
+        }
     }
 });
 

@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import {Avatar} from "primeng/avatar";
-import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-user',
   imports: [
-    Avatar,
-    NgClass
+    Avatar
   ],
   templateUrl: './user.html',
   styleUrl: './user.css'
